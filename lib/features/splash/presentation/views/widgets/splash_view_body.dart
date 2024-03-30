@@ -27,14 +27,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
-  
-
- 
-
   @override
   void dispose() {
-    animationController.dispose();
     super.dispose();
+    animationController.dispose();
   }
 
   @override
@@ -51,19 +47,22 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
-   void initSlidingAnimation() {
+
+  void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
-    );
+      duration: const Duration(seconds: 2),
+    
+    )..repeat();
     slidingAnimation = Tween<Offset>(
-      begin: const Offset(0, 2),
+      begin: const Offset(0,2),
       end: Offset.zero,
     ).animate(animationController);
   }
+
   void navigateToHome() {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 2),
       () {
         Get.to(() => const HomeView(),
             transition: Transition.fade, duration: kTransitionDuration);
