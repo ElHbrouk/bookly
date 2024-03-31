@@ -1,4 +1,5 @@
 import 'package:bookly/core/tuils/styles.dart';
+import 'package:bookly/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/featured_book_item_list_view.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,23 +12,33 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomAppBar(),
-            FeaturedBookItemListView(),
-            Padding(
-              padding: EdgeInsets.only(top: 40.0),
-              child: Text(
-                'Best Seller',
-                style: AppStyles.titleMedium,
+      child: CustomScrollView(slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                child: CustomAppBar(),
               ),
-            ),
-          ],
+              FeaturedBookItemListView(),
+              Padding(
+                padding: EdgeInsets.only(top: 40.0, bottom: 20, left: 24),
+                child: Text(
+                  'Best Seller',
+                  style: AppStyles.semiBold18,
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
+        SliverFillRemaining(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            child: BestSellerListViewItem(),
+          ),
+        )
+      ]),
     );
   }
 }
