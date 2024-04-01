@@ -45,7 +45,16 @@ class BestSellerItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  const BookRatingItem(),
+                  const Row(
+                    children: [
+                      Text(
+                        r'19.99$',
+                        style: AppStyles.bold20,
+                      ),
+                      Spacer(),
+                      BookRatingItem(),
+                    ],
+                  ),
                 ],
               ),
             ),

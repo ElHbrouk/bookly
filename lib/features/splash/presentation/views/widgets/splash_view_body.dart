@@ -1,6 +1,4 @@
-import 'package:bookly/constants.dart';
 import 'package:bookly/core/tuils/app_router.dart';
-import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
