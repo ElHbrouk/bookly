@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomBookItem extends StatelessWidget {
-  const CustomBookItem({
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({
     super.key,
   });
 
