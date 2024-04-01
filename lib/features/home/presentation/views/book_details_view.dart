@@ -1,3 +1,5 @@
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsView extends StatelessWidget {
@@ -6,7 +8,14 @@ class BookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BookDetailsView(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            CustomBookDetailsAppBar(),
+            CustomBookItem(),
+          ],
+        ),
+      ),
     );
   }
 }
