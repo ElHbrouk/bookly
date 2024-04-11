@@ -7,7 +7,7 @@ import '../entities/book_entity.dart';
 
 class FetchNewestBooksUseCase extends UseCase<List<BookEntity>, NoParam> {
   final HomeRepository homeRepository;
-  FetchFeaturedBooksUseCase({required this.homeRepository});
+  FetchNewestBooksUseCase({required this.homeRepository});
 
   @override
   Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) async{
