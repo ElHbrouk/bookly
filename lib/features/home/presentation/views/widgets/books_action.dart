@@ -1,4 +1,4 @@
-import 'package:bookly/core/tuils/styles.dart';
+import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
