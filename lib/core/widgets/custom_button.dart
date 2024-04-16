@@ -6,7 +6,8 @@ class CustomButton extends StatelessWidget {
     required this.buttonName,
     this.onPressed,
     required this.backgroundColor,
-    this.textStyle,  this.borderRadius,
+    this.textStyle,
+    this.borderRadius,
   });
   final String buttonName;
   final void Function()? onPressed;
@@ -22,7 +23,7 @@ class CustomButton extends StatelessWidget {
         style: TextButton.styleFrom(
             backgroundColor: backgroundColor,
             shape: RoundedRectangleBorder(
-              borderRadius: borderRadius??BorderRadius.circular(16),
+              borderRadius: borderRadius ?? BorderRadius.circular(16),
             )),
         child: Text(
           buttonName,
