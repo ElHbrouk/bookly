@@ -20,8 +20,13 @@ class SearchViewBody extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 20.0),
             child: CustomSearchTextield(),
           ),
-          Text('Search Result',style: AppStyles.bold20,),
-          SizedBox(height: 10,),
+          Text(
+            'Search Result',
+            style: AppStyles.bold20,
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Expanded(
             child: SearchResultListView(),
           ),
