@@ -1,5 +1,6 @@
 import 'package:hive_flutter/adapters.dart';
 part 'book_entity.g.dart';
+
 @HiveType(typeId: 0)
 class BookEntity {
   @HiveField(0)
@@ -15,11 +16,12 @@ class BookEntity {
   @HiveField(5)
   final String? rating;
 
-  BookEntity(
-      {required this.bookId,
-      required this.image,
-      required this.title,
-      required this.authorName,
-      required this.price,
-      required this.rating});
+  const BookEntity({
+    required this.bookId,
+    required this.image,
+    required this.title,
+    required this.authorName,
+    required this.price,
+    required this.rating,
+  });
 }
