@@ -22,7 +22,7 @@ class HomeRepositoryImp extends HomeRepository {
       List<BookEntity> books = await homeRemoteDataSource.fetchFeaturedBooks();
       return right(books);
     } catch (e) {
-      return left(Failure());
+      return left(ServerFailure(message: e.toString()));
     }
   }
 
@@ -36,7 +36,7 @@ class HomeRepositoryImp extends HomeRepository {
       List<BookEntity> books = await homeRemoteDataSource.fetchNewestBooks();
       return right(books);
     } catch (e) {
-      return left(Failure());
+      return left(ServerFailure(message: e.toString()));
     }
   }
 }
